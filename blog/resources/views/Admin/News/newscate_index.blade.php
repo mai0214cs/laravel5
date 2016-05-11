@@ -1,6 +1,6 @@
 @extends('templateadmin')
 @section('title')
-{{trans('news.News_PageList')}}
+sdfsdfgdffdf
 @endsection
 @section('head')
 sfsdgsdfsdfsdas
@@ -8,7 +8,7 @@ sfsdgsdfsdfsdas
 @section('content')
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">{{trans('news.News_PageList')}}</h3>
+        <h3 class="box-title">Danh muc tin tuc</h3>
     </div>
     <div class="box-body">
         <div class="dataTables_wrapper form-inline dt-bootstrap">
@@ -37,12 +37,12 @@ sfsdgsdfsdfsdas
                         <thead>
                             <tr role="row">
                                 <th></th>
-                                <th>{{trans('news.NewsList_Title')}}</th>
-                                <th>{{trans('news.NewsList_Avatar')}}</th>
-                                <th>{{trans('news.NewsList_Parent')}}</th>
-                                <th>{{trans('news.NewsList_Url')}}</th>
-                                <th>{{trans('news.NewsList_Status')}}</th>
-                                <th>{{trans('news.NewsList_Order')}}</th>
+                                <th>Tieu de</th>
+                                <th>Hinh anh</th>
+                                <th>Danh muc</th>
+                                <th>URL</th>
+                                <th>Stutus</th>
+                                <th>Order</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -52,13 +52,12 @@ sfsdgsdfsdfsdas
                                 <td style="text-align: center;"><input type="checkbox" /></td>
                                 <td>{{$item->title}}</td>
                                 <td><img style="width: 150px;" src="{{ReturnImage($item->avatar)}}" alt="{{$item->title}}" /></td>
-                                <td><a href="/{{$item->getCate()->url}}">{{$item->getCate()->title}}</a></td>
                                 <td><a href="/{{$item->url}}">{{$item->url}}</a></td>
                                 <td style="text-align: center;"><input type="checkbox" {{($item->status==1?'checked="checked"':'')}}  /></td>
                                 <td style="text-align: right;">{{$item->order}}</td>
                                 <td>
-                                    <a class="label label-primary" href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> {{trans('news.News_ButtonEdit')}}</a>
-                                    <a class="label label-danger" href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> {{trans('news.News_ButtonDelete')}}</a>
+                                    <a class="label label-primary" href=""><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Edit</a>
+                                    <a class="label label-danger" href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Delete</a>
                                 </td>
                             </tr>
                             @endforeach
